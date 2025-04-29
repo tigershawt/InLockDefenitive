@@ -1,4 +1,4 @@
-package com.jetbrains.kmpapp
+package com.jetbrains.inlock
 
 import androidx.compose.ui.window.ComposeUIViewController
 

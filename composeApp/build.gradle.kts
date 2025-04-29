@@ -33,6 +33,11 @@ kotlin {
             implementation(libs.androidx.compose.ui.tooling.preview)
             implementation(libs.androidx.activity.compose)
             implementation(libs.ktor.client.okhttp)
+
+            // Firebase dependencies
+            implementation("com.google.firebase:firebase-auth-ktx:22.3.1")
+            implementation("com.google.firebase:firebase-firestore-ktx:24.9.1")
+            implementation("com.google.firebase:firebase-storage-ktx:20.3.0")
         }
         iosMain.dependencies {
             implementation(libs.ktor.client.darwin)
@@ -54,16 +59,22 @@ kotlin {
             implementation(libs.koin.core)
             implementation(libs.koin.compose.viewmodel)
             implementation(libs.navigation.compose)
+
+            // Coroutines
+            implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
+
+            // DateTime
+            implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.5.0")
         }
     }
 }
 
 android {
-    namespace = "com.jetbrains.kmpapp"
+    namespace = "com.jetbrains.inlock"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.jetbrains.kmpapp"
+        applicationId = "com.jetbrains.inlock"
         minSdk = 24
         targetSdk = 35
         versionCode = 1
